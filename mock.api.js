@@ -1,6 +1,7 @@
 const cors = require("cors");
 const faker = require("faker");
 const express = require("express");
+const port = process.env.PORT || 4000;
 
 const app = express();
 
@@ -167,8 +168,8 @@ app.post("/pepo-control/attendances/done-step", async (req, res) => {
     });
 });
 
-app.listen(8080, "127.0.0.1", () => {
-    console.log(`Listening: http://localhost:${8080}`);
+app.listen(port, () => {
+    console.log(`Listening: http://localhost:${port}`);
 });
 
 function delay(ms) {
